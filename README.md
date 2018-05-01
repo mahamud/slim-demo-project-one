@@ -10,6 +10,7 @@ Installation Instructions:
 -------------------------
 
 1. Need to setup a virtual Host to run the app.
+2. Set Environment Variables for DB on /app/config/config.dev.php
 2. Run Composer
 3. Please look in to app/config/config.dev.php for required environmental variables that require to be configured
 4. Routes are under /app/routes.php
