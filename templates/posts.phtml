@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Sample Application</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            margin: 50px 0 0 0;
+            padding: 0;
+            width: 100%;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: left;
+            color: #aaa;
+            font-size: 18px;
+        }
+        h1 {
+            color: black;
+            letter-spacing: -3px;
+            font-family: 'Lato', sans-serif;
+            font-size: 40px;
+            font-weight: 200;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Demo Application</h1>
+<div>All Posts</div>
+<?php if(!empty($posts) && is_array($posts)) : ?>
+    <table border="1">
+        <thead style="background:#aaaaaa; font-style: italic">
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date Created</th>
+                <th>Author</th>
+                <th>More</th>
+            </tr>
+        </thead>
+        <?php foreach($posts as $key => $post): ?>
+        <tr>
+            <td><?= htmlspecialchars($post['title']); ?></td>
+            <td><?= htmlspecialchars($post['short_text']); ?></td>
+            <td><?= date('F j, Y', strtotime($post['created'])); ?></td>
+            <td><?= htmlspecialchars($post['author']); ?></td>
+            <td><a href="/details/<?= htmlspecialchars($post['id']); ?>">Read More</a></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <p>No Posts Found</p>
+<?php endif; ?>
+</body>
+</html>
