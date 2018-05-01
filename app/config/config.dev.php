@@ -20,18 +20,19 @@ $settings = array('settings' => [
     'displayErrorDetails' => true, // set to false in production
     'addContentLengthHeader' => false, // Allow the web server to send the content-length header,
     'database' => [
-        'driver' => 'mysql', //getenv('DBTYPE')
-        'host' => 'ews-test.cnmj82dw3dge.ap-southeast-1.rds.amazonaws.com', //getenv('DBHOST')
-        'database' => 'ews_test_application', //getenv('DBNAME')
-        'username' => 'test123456', //getenv('DBUSERNAME')
-        'password' => '123456test', //getenv('DBPASSWORD'),
+        'driver' => getenv('DBTYPE'),
+        'host' => getenv('DBHOST'),
+        'database' => getenv('DBNAME'),
+        'username' => getenv('DBUSERNAME'),
+        'password' => getenv('DBPASSWORD'),
         'charset' => 'utf8',
         'collation' => 'utf8_general_ci',
-        'port' => '3306', //getenv('DBPORT')
+        'port' => getenv('DBPORT'),
         'strict' => false,
     ],
     'renderer' => [
         'template_path' => BASE_PATH.DIRECTORY_SEPARATOR.'templates'.DIRECTORY_SEPARATOR,
     ],
 ]);
+
 
