@@ -13,7 +13,7 @@ require_once BASE_PATH . '/app/lang/en_au/messages.php';
 require_once BASE_PATH . '/app/constants.php';
 
 // Get Config File as per environment
-require_once BASE_PATH . '/app/config/config.'.getenv('ENVIRONMENT').'.php';
+require_once BASE_PATH . '/app/config/config.'.DEVELOPMENT_ENVIRONMENT.'.php';
 
 //Set default Date/Time Zone
 date_default_timezone_set(DEFAULT_TIME_ZONE);
