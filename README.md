@@ -10,8 +10,9 @@ Installation Instructions:
 -------------------------
 
 1. Need to setup a virtual Host to run the app.
-2. Please look in to app/config/config.dev.php for required environmental variables that require to be configured
-3. Routes are under /app/routes.php
+2. Run Composer
+3. Please look in to app/config/config.dev.php for required environmental variables that require to be configured
+4. Routes are under /app/routes.php
 
 
 Sample Url Requests:
