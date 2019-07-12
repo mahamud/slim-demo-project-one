@@ -1,4 +1,4 @@
-# slim-eightcap
+# slim-demo-project-one
 
 Notes:
 -----
